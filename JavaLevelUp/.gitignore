@@ -1,2 +1,4 @@
 .idea
 /JavaLevelUp.iml
+*.txt
+/*.txt
