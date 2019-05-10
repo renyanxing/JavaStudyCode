@@ -7,7 +7,7 @@ import java.util.Properties;
 public class Demo01 {
     public static void main(String[] args) throws Exception {
         Properties prop = new Properties();
-        prop.load(new FileReader("Study\\day13\\prop.txt"));
+        prop.load(new FileReader("day13\\prop.txt"));
         String className = prop.getProperty("className");
         String methodName = prop.getProperty("methodName");
         Class clazz = Class.forName(className);
