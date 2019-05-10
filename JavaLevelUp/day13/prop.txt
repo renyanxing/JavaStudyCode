@@ -1,0 +1,6 @@
+className=cn.renyx.demo03ReflectTest.Person
+methodName=eat
+className=cn.renyx.demo03ReflectTest.Student
+methodName=study
+className=cn.renyx.demo03ReflectTest.Worker
+methodName=work
