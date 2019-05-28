@@ -1,27 +1,30 @@
-package cn.renyx.Utils;
+package com.renyx.utils;
 
-import java.sql.*;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
-public class JDBCUtils {
-    private static String driver = "com.mysql.jdbc.Driver";
-    private static String url = "jdbc:MySql://127.0.0.1:3306/day17";
-    private static String user = "root";
-    private static String password = "root";
-    static {
-        try {
-            Class.forName(driver);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class C3P0UtilsXML {
+    private static ComboPooledDataSource dataSource = new ComboPooledDataSource();
+
+
+
     public static Connection getConnection() {
-        try {
-            return DriverManager.getConnection(url, user, password);
-        } catch (Exception e) {
-            throw new RuntimeException("获取数据库连接异常：" + e);
-        }
-    }
 
+        try {
+            return dataSource.getConnection();
+        } catch (Exception e) {
+            throw new RuntimeException("获取数据库连接失败：" + e);
+        }
+
+    }
+    public static DataSource getDataSource(){
+        return dataSource;
+    }
     public static void close(ResultSet rs, Statement stat, Connection conn) {
         if (rs != null)
             try {

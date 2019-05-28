@@ -1,6 +1,6 @@
 package cn.renyx.JDBC;
 
-import cn.renyx.Utils.JDBCUtils;
+import cn.renyx.demo02.Utils.JDBCUtils;
 import org.junit.Test;
 
 import java.sql.Connection;

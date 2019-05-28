@@ -1,10 +1,10 @@
-package cn.renyx.Utils;
+package cn.renyx.demo02.Utils;
 
 import java.sql.*;
 
 public class JDBCUtils {
     private static String driver = "com.mysql.jdbc.Driver";
-    private static String url = "jdbc:MySql://127.0.0.1:3306/day16";
+    private static String url = "jdbc:MySql://127.0.0.1:3306/day17";
     private static String user = "root";
     private static String password = "root";
     static {
